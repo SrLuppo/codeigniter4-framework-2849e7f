@@ -1,0 +1,117 @@
+CRITICAL - 2024-11-26 22:34:29 --> ErrorException: Undefined property: App\Controllers\ProdutosController::$produtoModel
+[Method: POST, Route: produtos/excluir/7]
+in APPPATH\Controllers\ProdutosController.php on line 60.
+ 1 APPPATH\Controllers\ProdutosController.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdutosController->excluir()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\inetpub\\wwwroot\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-11-26 22:43:01 --> ErrorException: Undefined property: App\Controllers\ProdutosController::$produtoModel
+[Method: POST, Route: produtos/excluir/7]
+in APPPATH\Controllers\ProdutosController.php on line 65.
+ 1 APPPATH\Controllers\ProdutosController.php(65): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdutosController->excluir()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\inetpub\\wwwroot\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-11-26 22:43:19 --> ErrorException: Undefined property: App\Controllers\ProdutosController::$produtoModel
+[Method: POST, Route: produtos/excluir/7]
+in APPPATH\Controllers\ProdutosController.php on line 65.
+ 1 APPPATH\Controllers\ProdutosController.php(65): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdutosController->excluir()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\inetpub\\wwwroot\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-11-26 22:44:15 --> ErrorException: Undefined property: App\Controllers\ProdutosController::$produtoModel
+[Method: POST, Route: produtos/excluir/7]
+in APPPATH\Controllers\ProdutosController.php on line 64.
+ 1 APPPATH\Controllers\ProdutosController.php(64): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdutosController->excluir()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\inetpub\\wwwroot\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-11-26 22:44:36 --> ErrorException: Undefined property: App\Controllers\ProdutosController::$produtoModel
+[Method: POST, Route: produtos/excluir/7]
+in APPPATH\Controllers\ProdutosController.php on line 64.
+ 1 APPPATH\Controllers\ProdutosController.php(64): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdutosController->excluir()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\inetpub\\wwwroot\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-11-26 22:44:39 --> ErrorException: Undefined property: App\Controllers\ProdutosController::$produtoModel
+[Method: POST, Route: produtos/excluir/7]
+in APPPATH\Controllers\ProdutosController.php on line 64.
+ 1 APPPATH\Controllers\ProdutosController.php(64): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProdutosController->excluir()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\inetpub\\wwwroot\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-11-26 23:16:35 --> ArgumentCountError: Too few arguments to function App\Controllers\FornecedoresController::cadastrar(), 0 passed in C:\inetpub\wwwroot\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: fornecedores/cadastrar]
+in APPPATH\Controllers\FornecedoresController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FornecedoresController->cadastrar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\inetpub\\wwwroot\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-11-26 23:30:55 --> Error: Call to undefined method CodeIgniter\HTTP\Response::json()
+[Method: POST, Route: fornecedores/cadastrar]
+in APPPATH\Controllers\FornecedoresController.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FornecedoresController->cadastrar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\inetpub\\wwwroot\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-11-26 23:32:16 --> Error: Call to undefined method CodeIgniter\HTTP\Response::json()
+[Method: POST, Route: fornecedores/cadastrar]
+in APPPATH\Controllers\FornecedoresController.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FornecedoresController->cadastrar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\inetpub\\wwwroot\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-11-26 23:35:04 --> ArgumentCountError: Too few arguments to function App\Controllers\FornecedoresController::cadastrar(), 0 passed in C:\inetpub\wwwroot\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: fornecedores/cadastrar]
+in APPPATH\Controllers\FornecedoresController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FornecedoresController->cadastrar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\inetpub\\wwwroot\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-11-26 23:41:34 --> Error: Class "Services" not found
+[Method: GET, Route: fornecedores]
+in APPPATH\Config\Routes.php on line 5.
+ 1 SYSTEMPATH\Router\RouteCollection.php(340): require()
+ 2 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\inetpub\\wwwroot\\codeigniter4-framework-2849e7f\\public\\index.php')

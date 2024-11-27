@@ -1,0 +1,10 @@
+CRITICAL - 2024-11-27 16:01:54 --> ArgumentCountError: Too few arguments to function App\Controllers\FornecedoresController::cadastrar(), 0 passed in C:\inetpub\wwwroot\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: fornecedores/cadastrar]
+in APPPATH\Controllers\FornecedoresController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FornecedoresController->cadastrar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\inetpub\\wwwroot\\codeigniter4-framework-2849e7f\\public\\index.php')
