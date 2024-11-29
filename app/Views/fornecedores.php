@@ -8,13 +8,15 @@
 <body>
     <div class="container mt-4">
         <h2>Fornecedores</h2>
-        <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal-novo-fornecedor">Novo Fornecedor</button>
+        <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal-novo-fornecedor" onclick="$('#action').val('novo');" >Novo Fornecedor</button>
 
         <!-- Modal Cadastro de Fornecedor -->
         <div class="modal fade" id="modal-novo-fornecedor" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <form action="/fornecedores/cadastrar" method="post" id="form-novo-fornecedor">
+                    <form action="" method="post" id="form-novo-fornecedor">  
+                        <input type="hidden" name="action" id="action" value=""> 
+                        <input type="hidden" name="fornecedor-id" id="fornecedor-id" value="">           
                         <div class="modal-header">
                             <h5 class="modal-title">Adicionar Fornecedor</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
@@ -177,7 +179,13 @@
     </script>
     <script>
     // Editar fornecedor
-    function editarFornecedor(fornecedor) {
+    function editarFornecedor(fornecedor) {   
+
+        //fornecedor-id
+        $("#fornecedor-id").val(fornecedor.id);
+
+        $("#action").val("editar");
+        
         // Preenche o modal com os dados do fornecedor
         $('#modal-novo-fornecedor').modal('show');
 
@@ -199,33 +207,29 @@
     $('#form-novo-fornecedor').on('submit', function(e) {
         e.preventDefault(); // Evita o comportamento padrão do formulário
 
-        const actionUrl = $(this).attr('action'); // URL da ação
-        const formData = $(this).serialize(); // Dados do formulário
+        const actionUrl = $(this).attr('action'); 
+        const formData = $(this).serialize(); 
 
-        // Enviar os dados via Ajax
         $.ajax({
-            url: '/fornecedores/cadastrar',
+            url: ($("#action").val()=='novo'?'/fornecedores/cadastrar':'/fornecedores/editar/'+ document.getElementById('fornecedor-id').value),
             type: 'POST',
             data: formData,
             success: function(response) {
                 console.table(response);
                 if (response.status === 'success') {
-                    // Atualiza a tabela com o fornecedor adicionado
-                    carregarTabelaFornecedores(response.fornecedor);
-                    
                     $('#modal-novo-fornecedor').modal('hide');
                     alert(response.message);
+                    location.reload();
                 } else {
                     alert(response.message || 'Erro ao salvar');
                 }
             },
             error: function() {
                 alert('Erro ao enviar os dados!');
+                console.console.log(response);                
             }
         });
     });
-
-
 // teste outra maneira de castro
 function prepararDados(ProdutoId, Nome, Valor, Fornecedor) {
             document.getElementById('modal-editar-produto-ProdutoId').value = ProdutoId;
@@ -235,7 +239,6 @@ function prepararDados(ProdutoId, Nome, Valor, Fornecedor) {
 
             $('#modal-editar-produto').modal('show');
         }
-
         function enviarRequisicao(url, method, data, successCallback, errorCallback) {
             $.ajax({
                 url: url,
@@ -250,89 +253,7 @@ function prepararDados(ProdutoId, Nome, Valor, Fornecedor) {
                     }
                 }
             });
-        }
-
-
-
-
-
-
-
-    function carregarTabelaFornecedores(fornecedor = null) {
-        $.ajax({
-            url: '/fornecedores',  // Endpoint que retorna os dados dos fornecedores
-            method: 'GET',
-            success: function(response) {
-                $('tbody').html('');  // Limpa a tabela antes de preencher
-
-                // Se o fornecedor for passado, ele será adicionado ou atualizado
-                if (fornecedor) {
-                    // Verifica se o fornecedor já existe na tabela
-                    let fornecedorExistente = response.fornecedores.find(f => f.id === fornecedor.id);
-                    if (fornecedorExistente) {
-                        // Atualiza a linha existente
-                        $('tbody tr').each(function() {
-                            if ($(this).find('td').first().text() === fornecedorExistente.nome) {
-                                $(this).html(`
-                                    <td>${fornecedor.nome}</td>
-                                    <td>${fornecedor.cnpj}</td>
-                                    <td>${fornecedor.email}</td>
-                                    <td>${fornecedor.telefone}</td>
-                                    <td>
-                                        <button class="btn btn-warning" 
-                                                onclick="prepararDadosFornecedor('${fornecedor.id}', '${fornecedor.nome}', '${fornecedor.cnpj}', '${fornecedor.email}')">Editar</button>
-                                        <a href="javascript:void(0)" 
-                                        class="btn btn-danger" 
-                                        onclick="excluirFornecedor(${fornecedor.id})">Excluir</a>
-                                    </td>
-                                `);
-                            }
-                        });
-                    } else {
-                        // Adiciona o fornecedor à tabela
-                        $('tbody').append(`
-                            <tr>
-                                <td>${fornecedor.nome}</td>
-                                <td>${fornecedor.cnpj}</td>
-                                <td>${fornecedor.email}</td>
-                                <td>${fornecedor.telefone}</td>
-                                <td>
-                                    <button class="btn btn-warning" 
-                                            onclick="prepararDadosFornecedor('${fornecedor.id}', '${fornecedor.nome}', '${fornecedor.cnpj}', '${fornecedor.email}')">Editar</button>
-                                    <a href="javascript:void(0)" 
-                                    class="btn btn-danger" 
-                                    onclick="excluirFornecedor(${fornecedor.id})">Excluir</a>
-                                </td>
-                            </tr>
-                        `);
-                    }
-                } else {
-                    // Caso contrário, carrega todos os fornecedores
-                    response.fornecedores.forEach(fornecedor => {
-                        $('tbody').append(`
-                            <tr>
-                                <td>${fornecedor.nome}</td>
-                                <td>${fornecedor.cnpj}</td>
-                                <td>${fornecedor.email}</td>
-                                <td>${fornecedor.telefone}</td>
-                                <td>
-                                    <button class="btn btn-warning" 
-                                            onclick="prepararDadosFornecedor('${fornecedor.id}', '${fornecedor.nome}', '${fornecedor.cnpj}', '${fornecedor.email}')">Editar</button>
-                                    <a href="javascript:void(0)" 
-                                    class="btn btn-danger" 
-                                    onclick="excluirFornecedor(${fornecedor.id})">Excluir</a>
-                                </td>
-                            </tr>
-                        `);
-                    });
-                }
-            },
-            error: function() {
-                alert('Erro ao carregar a tabela de fornecedores!');
-            }
-        });
-    }
-
+        }    
     </script> 
 
 </body>

@@ -81,4 +81,10 @@ class FornecedorModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function setValidationRule($field, $rule)
+    {
+        $this->validationRules[$field] = $rule;
+    }
+
 }
